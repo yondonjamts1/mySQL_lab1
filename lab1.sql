@@ -120,8 +120,7 @@ WHERE salary < 15000;
 SELECT * FROM propertyforrent
 WHERE type1 = "House";
 
-DROP * FROM PropertyForRent
-WHERE rooms = 5;
+DELETE FROM PropertyForRent WHERE rooms = 5;
 
 INSERT INTO viewing(viewdate)
 WHERE viewdate = "2004-05-14"
