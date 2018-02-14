@@ -122,6 +122,6 @@ WHERE type1 = "House";
 
 DELETE FROM PropertyForRent WHERE rooms = 5;
 
-INSERT INTO viewing(viewdate)
-WHERE viewdate = "2004-05-14"
-VALUES ("2004-05-10");
+UPDATE viewing
+SET viewDate="2004-05-10"
+WHERE viewdate = "2004-05-14";
