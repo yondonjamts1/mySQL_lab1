@@ -112,7 +112,7 @@ SELECT * FROM branch
 WHERE city = "London";
 
 SELECT * FROM staff
-WHERE dob < "1965-01-01";
+WHERE dob < "1965-01-01" && sex = "F";
 
 SELECT * FROM staff
 WHERE salary < 15000;
