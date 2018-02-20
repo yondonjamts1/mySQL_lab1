@@ -38,3 +38,6 @@ WHERE dob < "1970-01-01" && position1 = "Assistant";
 --task 20
 SELECT * FROM viewing
 WHERE viewDate LIKE "2004-05-%";
+--task 22
+SELECT * FROM staff
+WHERE position1 = "Manager" OR branchNo = "B007";
