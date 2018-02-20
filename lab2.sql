@@ -26,6 +26,8 @@ ORDER BY privateowner.fName ASC;
 --task 8 dutuu
 --column name.g StaffCount bolgoj chadaagui baigaa
 SELECT COUNT(staffNo) FROM staff;
+--task 10
+SELECT min(salary),max(salary),AVG(salary) FROM staff;
 --task 14
 SELECT AVG(maxRent) FROM client1;
 --task 15
