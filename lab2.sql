@@ -51,6 +51,10 @@ SELECT COUNT(staffNo), SUM(salary) FROM staff
 WHERE sex = "M";
 
 
+--task 13
+SELECT MAX(maxRent) FROM client1;
+
+
 --task 14
 SELECT AVG(maxRent) FROM client1;
 
