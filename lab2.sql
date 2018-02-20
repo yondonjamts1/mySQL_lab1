@@ -28,6 +28,9 @@ ORDER BY privateowner.fName ASC;
 SELECT COUNT(staffNo) FROM staff;
 --task 10
 SELECT min(salary),max(salary),AVG(salary) FROM staff;
+--task 11
+SELECT COUNT(staffNo), SUM(salary) FROM staff
+WHERE sex = "M";
 --task 14
 SELECT AVG(maxRent) FROM client1;
 --task 15
