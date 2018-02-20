@@ -16,3 +16,6 @@ SELECT street,city,rooms,rent
 FROM propertyforrent
 WHERE staffNo NOT LIKE ''
 ORDER BY rent ASC;
+
+SELECT * FROM privateowner 
+ORDER BY privateowner.fName ASC;
