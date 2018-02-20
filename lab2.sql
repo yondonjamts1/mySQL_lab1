@@ -11,3 +11,8 @@ ORDER BY rent;
 
 SELECT fName, lName, telNo FROM client1
 WHERE fName LIKE 'M%';
+
+SELECT street,city,rooms,rent
+FROM propertyforrent
+WHERE staffNo NOT LIKE ''
+ORDER BY rent ASC;
