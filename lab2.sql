@@ -42,6 +42,10 @@ ORDER BY privateowner.fName ASC;
 SELECT COUNT(staffNo) FROM staff;
 
 
+--task 9
+SELECT COUNT(DISTINCT branchNo) FROM propertyforrent
+
+
 --task 10
 SELECT min(salary),max(salary),AVG(salary) FROM staff;
 
