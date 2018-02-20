@@ -32,3 +32,9 @@ WHERE rent BETWEEN 400 AND 600 && city = "Glasgow";
 --task 17
 SELECT * FROM propertyforrent
 WHERE city = "London" && rooms = "4";
+--task 19
+SELECT * FROM staff
+WHERE dob < "1970-01-01" && position1 = "Assistant";
+--task 20
+SELECT * FROM viewing
+WHERE viewDate LIKE "2004-05-%";
