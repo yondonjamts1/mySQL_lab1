@@ -1,3 +1,5 @@
+-- http://www.peachpit.com/articles/article.aspx?p=1276352&seqNum=7
+
 --task 1
 SELECT * FROM staff 
 WHERE position1 IN ("Manager" ,"Supervisor");
