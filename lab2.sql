@@ -26,3 +26,6 @@ SELECT COUNT(staffNo) FROM staff;
 --task 15
 SELECT * FROM staff
 WHERE salary > 20000 && sex = 'M';
+--task 16
+SELECT * FROM propertyforrent
+WHERE rent BETWEEN 400 AND 600 && city = "Glasgow";
