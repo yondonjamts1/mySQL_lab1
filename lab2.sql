@@ -29,3 +29,6 @@ WHERE salary > 20000 && sex = 'M';
 --task 16
 SELECT * FROM propertyforrent
 WHERE rent BETWEEN 400 AND 600 && city = "Glasgow";
+--task 17
+SELECT * FROM propertyforrent
+WHERE city = "London" && rooms = "4";
