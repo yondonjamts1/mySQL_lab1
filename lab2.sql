@@ -43,7 +43,7 @@ SELECT COUNT(staffNo) FROM staff;
 
 
 --task 9
-SELECT COUNT(DISTINCT branchNo) FROM propertyforrent
+SELECT COUNT(DISTINCT branchNo) FROM propertyforrent;
 
 
 --task 10
@@ -76,6 +76,10 @@ WHERE rent BETWEEN 400 AND 600 && city = "Glasgow";
 --task 17
 SELECT * FROM propertyforrent
 WHERE city = "London" && rooms = "4";
+
+
+--task 18
+SELECT SUM(salary), SUM(salary)/2 FROM staff;
 
 
 --task 19
