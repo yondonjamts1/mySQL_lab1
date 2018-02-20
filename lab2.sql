@@ -84,6 +84,10 @@ SELECT * FROM viewing
 WHERE viewDate LIKE "2004-05-%";
 
 
+--task 21
+SELECT MAX(rent) FROM propertyforrent
+GROUP BY type1;
+
 --task 22
 SELECT * FROM staff
 WHERE position1 = "Manager" OR branchNo = "B007";
