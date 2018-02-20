@@ -57,6 +57,11 @@ SELECT COUNT(staffNo), SUM(salary) FROM staff
 WHERE sex = "M";
 
 
+--task 12
+SELECT min(rent) FROM propertyforrent
+WHERE rooms = 3;
+
+
 --task 13
 SELECT MAX(maxRent) FROM client1;
 
