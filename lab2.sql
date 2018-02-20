@@ -20,3 +20,6 @@ ORDER BY rent ASC;
 --task 7
 SELECT * FROM privateowner 
 ORDER BY privateowner.fName ASC;
+--task 8 dutuu
+--column name.g StaffCount bolgoj chadaagui baigaa
+SELECT COUNT(staffNo) FROM staff;
