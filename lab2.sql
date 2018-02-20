@@ -8,3 +8,6 @@ ORDER BY dob DESC;
 SELECT * FROM propertyforrent
 WHERE rooms BETWEEN 3 AND 5
 ORDER BY rent;
+
+SELECT fName, lName, telNo FROM client1
+WHERE fName LIKE 'M%';
