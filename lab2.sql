@@ -12,6 +12,9 @@ ORDER BY rent;
 --task 4
 SELECT fName, lName, telNo FROM client1
 WHERE fName LIKE 'M%';
+--task 5
+SELECT * FROM client1
+WHERE telNo LIKE "%8%%8%%8%";
 --task 6
 SELECT street,city,rooms,rent
 FROM propertyforrent
