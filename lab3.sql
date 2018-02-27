@@ -10,3 +10,7 @@ select * from propertyforrent
 where rooms between 3 and 4
 order by rent ASC;
 
+--task 4
+SELECT * FROM staff
+WHERE lName LIKE 'B%';
+
