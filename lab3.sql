@@ -62,3 +62,7 @@ WHERE comment1 = " ";
 --task 16
 SELECT * FROM propertyforrent
 where propertyNo like "P%";
+
+--task 17
+SELECT * FROM registration
+where datejoined like "2004-%%-%%";
