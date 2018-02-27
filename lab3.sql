@@ -58,3 +58,7 @@ group by city;
 --task 15
 SELECT * FROM viewing 
 WHERE comment1 = " ";
+
+--task 16
+SELECT * FROM propertyforrent
+where propertyNo like "P%";
