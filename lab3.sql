@@ -42,4 +42,11 @@ group by branchNo;
 
 --task 11
 select * from propertyforrent
-where rent = (select min(rent) from propertyforrent where rooms =4);
+where rent = (select min(rent) from propertyforrent where rooms = 4);
+
+--task12
+
+
+--task13
+select * from propertyforrent
+where city = 'Aberdeen';
