@@ -45,7 +45,8 @@ select * from propertyforrent
 where rent = (select min(rent) from propertyforrent where rooms = 4);
 
 --task 12
-
+select type1,propertyNo,min(rent),max(rent) from propertyforrent
+group by type1;
 
 --task 13
 select * from propertyforrent
