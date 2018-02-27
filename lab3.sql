@@ -17,3 +17,7 @@ WHERE lName LIKE 'B%';
 --task 5
 SELECT * FROM client1
 WHERE telNo LIKE "%1%%1%%1%";
+
+--task 6
+SELECT * FROM viewing
+where comment1 not like " ";
