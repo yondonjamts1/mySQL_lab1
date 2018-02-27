@@ -19,8 +19,11 @@ SELECT * FROM client1
 WHERE telNo LIKE "%1%%1%%1%";
 
 --task 6
+--SELECT * FROM viewing 
+--where comment1 <> " ";
+
 SELECT * FROM viewing 
-where comment1 <> " ";
+where comment1 != " ";
 
 --task 7
 select avg(salary) as 'SalaryAVG' from staff;
