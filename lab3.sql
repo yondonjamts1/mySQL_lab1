@@ -24,3 +24,7 @@ where comment1 not like " ";
 
 --task 7
 select avg(salary) as 'SalaryAVG' from staff;
+
+--task 8
+select branchNo,count(staffNo) from staff
+group by branchNo;
