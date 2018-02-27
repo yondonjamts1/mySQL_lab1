@@ -34,11 +34,17 @@ select branchNo,max(salary),min(salary),avg(salary) from staff
 group by branchNo;
 
 --task 10
-select branchNo,
-count(case when sex = 'M' then 1 else null end) as 'Male staff',
-count(case when sex = 'F' then 1 else null end) as 'Female staff',      
+
+--select branchNo,
+--count(case when sex = 'M' then 1 else null end) as 'Male staff',
+--count(case when sex = 'F' then 1 else null end) as 'Female staff',      
+--max(salary),min(salary),avg(salary) from staff
+--group by branchNo;
+
+select branchNo, sex,
+count(sex) as 'staffCount',      
 max(salary),min(salary),avg(salary) from staff
-group by branchNo;
+group by branchNo , sex;
 
 --task 11
 select * from propertyforrent
