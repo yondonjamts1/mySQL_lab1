@@ -54,3 +54,7 @@ where city = 'Aberdeen';
 --task 14
 select city,count(rent) from propertyforrent
 group by city;
+
+--task 15
+SELECT * FROM viewing 
+WHERE comment1 = " ";
