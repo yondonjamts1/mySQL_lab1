@@ -44,9 +44,13 @@ group by branchNo;
 select * from propertyforrent
 where rent = (select min(rent) from propertyforrent where rooms = 4);
 
---task12
+--task 12
 
 
---task13
+--task 13
 select * from propertyforrent
 where city = 'Aberdeen';
+
+--task 14
+select city,count(rent) from propertyforrent
+group by city;
