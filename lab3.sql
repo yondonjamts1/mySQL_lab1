@@ -39,3 +39,7 @@ count(case when sex = 'M' then 1 else null end) as 'Male staff',
 count(case when sex = 'F' then 1 else null end) as 'Female staff',      
 max(salary),min(salary),avg(salary) from staff
 group by branchNo;
+
+--task 11
+select * from propertyforrent
+where rent = (select min(rent) from propertyforrent where rooms =4);
