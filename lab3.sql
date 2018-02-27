@@ -14,3 +14,6 @@ order by rent ASC;
 SELECT * FROM staff
 WHERE lName LIKE 'B%';
 
+--task 5
+SELECT * FROM client1
+WHERE telNo LIKE "%1%%1%%1%";
