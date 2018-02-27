@@ -28,3 +28,7 @@ select avg(salary) as 'SalaryAVG' from staff;
 --task 8
 select branchNo,count(staffNo) from staff
 group by branchNo;
+
+--task 9
+select branchNo,max(salary),min(salary),avg(salary) from staff
+group by branchNo;
