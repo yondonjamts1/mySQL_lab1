@@ -50,8 +50,11 @@ max(salary),min(salary),avg(salary) from staff
 group by branchNo , sex;
 
 --task 11
-select * from propertyforrent
-where rent = (select min(rent) from propertyforrent where rooms = 4);
+--select * from propertyforrent
+--where rent = (select min(rent) from propertyforrent where rooms = 4);
+
+select *,min(rent) from propertyforrent
+where rooms = 4;
 
 --task 12
 select type1,propertyNo,min(rent),max(rent) from propertyforrent
