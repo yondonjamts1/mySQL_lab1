@@ -83,3 +83,10 @@ WHERE
     viewing.comment1 != " " && propertyforrent.propertyNo = viewing.propertyNo;
 
 --task 16
+
+
+--task 17
+
+
+--task 18
+SELECT * FROM staff ORDER BY RAND() LIMIT 1;
