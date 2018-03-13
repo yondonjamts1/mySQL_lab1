@@ -98,6 +98,10 @@ SELECT * FROM staff ORDER BY RAND() LIMIT 1;
 --task 21
 
 --task 22
+SELECT propertyNo FROM `viewing`  
+GROUP by viewing.propertyNo
+ORDER BY COUNT(viewing.propertyNo) DESC
+LIMIT 2;
 
 --task 23
 SELECT * FROM registration  
