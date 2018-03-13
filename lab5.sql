@@ -71,3 +71,15 @@ INNER JOIN branch ON
 (SELECT branchNo FROM branch WHERE city = 'London') = staff.`branchNo`
 OR (SELECT branchNo FROM branch WHERE city = 'Glasgow') = staff.`branchNo`
 ORDER BY DOB;
+
+--task 15
+SELECT
+    propertyforrent.*,
+    viewing.comment1
+FROM
+    propertyforrent,
+    viewing
+WHERE
+    viewing.comment1 != " " && propertyforrent.propertyNo = viewing.propertyNo;
+
+--task 16
