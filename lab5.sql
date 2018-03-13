@@ -99,9 +99,6 @@ SELECT * FROM staff ORDER BY RAND() LIMIT 1;
 
 --task 19
 --daalgavar 8
-
---task 20
---daalgavar 9
 SELECT
     *,
     COUNT(
@@ -113,18 +110,18 @@ FROM
 GROUP BY
     city;
     
+--task 20
+--daalgavar 9
+
 --task 21
 --daalgavar 10
-
---task 22
---daalgavar 11
 SELECT propertyNo FROM `viewing`  
 GROUP by viewing.propertyNo
 ORDER BY COUNT(viewing.propertyNo) DESC
 LIMIT 2;
 
---task 23
---daalgavar 12
+--task 22
+--daalgavar 11
 SELECT * FROM registration  
 ORDER BY registration.datejoined DESC
 LIMIT 2;
