@@ -94,7 +94,17 @@ SELECT * FROM staff ORDER BY RAND() LIMIT 1;
 --task 19
 
 --task 20
-
+SELECT
+    *,
+    COUNT(
+        CASE WHEN type1 = 'Flat' THEN 1 ELSE NULL END ) AS 'flat',
+	COUNT(
+    CASE WHEN type1 = 'House' THEN 1 ELSE NULL END ) AS 'house'
+FROM
+    propertyforrent
+GROUP BY
+    city;
+    
 --task 21
 
 --task 22
