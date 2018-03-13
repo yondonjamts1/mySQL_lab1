@@ -36,7 +36,7 @@ WHERE branchNo IN (SELECT branchNo FROM branch WHERE city = 'London')
 GROUP BY fName, IName;
 
 --task 8
-SELECT fName, IName, positionn, 
+SELECT fName, IName, position1, 
 salary-(SELECT AVG(salary) FROM staff) AS 'diffSalary' 
 FROM staff
 WHERE salary >(SELECT AVG(salary) FROM staff);
@@ -55,18 +55,18 @@ WHERE rent > (SELECT MAX(rent) FROM propertyforrent WHERE ownerNo = (SELECT owne
 
 --task 12
 SELECT * FROM propertyforrent
-INNER JOIN clientt ON
+INNER JOIN client1 ON
 rent >= maxRent
 AND Typee = prefType;
 
 --task 13
-SELECT clientt.`fName`, branchNo, staffNo FROM Registration
-INNER JOIN clientt ON
-Registration.`clientNo` = clientt.`clientNo` 
-ORDER BY branchNo, clientt.`fName`;
+SELECT client1.`fName`, branchNo, staffNo FROM Registration
+INNER JOIN client1 ON
+Registration.`clientNo` = client1.`clientNo` 
+ORDER BY branchNo, client1.`fName`;
 
 --task 14
-SELECT fname, positionn, branch.`postcode` FROM staff
+SELECT fname, position1, branch.`postcode` FROM staff
 INNER JOIN branch ON
 (SELECT branchNo FROM branch WHERE city = 'London') = staff.`branchNo`
 OR (SELECT branchNo FROM branch WHERE city = 'Glasgow') = staff.`branchNo`
