@@ -17,7 +17,7 @@ CREATE TABLE staff(
 	fName CHAR(10),
 	lName CHAR(10),
 	position1 CHAR(25),
-	sex CHAR(1),
+	sex CHAR(16),
 	dob DATE,
 	salary INT,
 	branchNo VARCHAR(25)
