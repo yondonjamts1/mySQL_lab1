@@ -54,18 +54,21 @@ SELECT * FROM propertyforrent
 WHERE rent > (SELECT MAX(rent) FROM propertyforrent WHERE ownerNo = (SELECT ownerNo FROM privateowner WHERE fname = 'Tony'));
 
 --task 12
+--daalgavar 1
 SELECT * FROM propertyforrent
 INNER JOIN client1 ON
 rent >= maxRent
 AND Typee = prefType;
 
 --task 13
+--daalgavar 2
 SELECT client1.`fName`, branchNo, staffNo FROM Registration
 INNER JOIN client1 ON
 Registration.`clientNo` = client1.`clientNo` 
 ORDER BY branchNo, client1.`fName`;
 
 --task 14
+--daalgavar 3
 SELECT fname, position1, branch.`postcode` FROM staff
 INNER JOIN branch ON
 ((SELECT branchNo FROM branch WHERE city = 'London') = staff.`branchNo`
@@ -73,6 +76,7 @@ OR (SELECT branchNo FROM branch WHERE city = 'Glasgow') = staff.`branchNo`)
 ORDER BY DOB;
 
 --task 15
+--daalgavar 4
 SELECT
     propertyforrent.*,
     viewing.comment1
@@ -83,17 +87,21 @@ WHERE
     viewing.comment1 != " " && propertyforrent.propertyNo = viewing.propertyNo;
 
 --task 16
+--daalgavar 5
 
 
 --task 17
-
+--daalgavar 6
 
 --task 18
+--daalgavar 7
 SELECT * FROM staff ORDER BY RAND() LIMIT 1;
 
 --task 19
+--daalgavar 8
 
 --task 20
+--daalgavar 9
 SELECT
     *,
     COUNT(
@@ -106,14 +114,17 @@ GROUP BY
     city;
     
 --task 21
+--daalgavar 10
 
 --task 22
+--daalgavar 11
 SELECT propertyNo FROM `viewing`  
 GROUP by viewing.propertyNo
 ORDER BY COUNT(viewing.propertyNo) DESC
 LIMIT 2;
 
 --task 23
+--daalgavar 12
 SELECT * FROM registration  
 ORDER BY registration.datejoined DESC
 LIMIT 2;
