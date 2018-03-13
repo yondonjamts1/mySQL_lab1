@@ -68,8 +68,8 @@ ORDER BY branchNo, client1.`fName`;
 --task 14
 SELECT fname, position1, branch.`postcode` FROM staff
 INNER JOIN branch ON
-(SELECT branchNo FROM branch WHERE city = 'London') = staff.`branchNo`
-OR (SELECT branchNo FROM branch WHERE city = 'Glasgow') = staff.`branchNo`
+((SELECT branchNo FROM branch WHERE city = 'London') = staff.`branchNo`
+OR (SELECT branchNo FROM branch WHERE city = 'Glasgow') = staff.`branchNo`)
 ORDER BY DOB;
 
 --task 15
@@ -90,3 +90,16 @@ WHERE
 
 --task 18
 SELECT * FROM staff ORDER BY RAND() LIMIT 1;
+
+--task 19
+
+--task 20
+
+--task 21
+
+--task 22
+
+--task 23
+SELECT * FROM registration  
+ORDER BY registration.datejoined DESC
+LIMIT 2;
