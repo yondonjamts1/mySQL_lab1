@@ -92,6 +92,18 @@ WHERE
 
 --task 17
 --daalgavar 6
+UPDATE staff
+SET sex = 'Female'
+WHERE sex = 'F';
+
+UPDATE staff
+SET sex = 'Male'
+WHERE sex = 'M';
+
+
+SELECT * FROM `staff`  
+ORDER BY `staff`.`dob` DESC
+LIMIT 1;
 
 --task 18
 --daalgavar 7
