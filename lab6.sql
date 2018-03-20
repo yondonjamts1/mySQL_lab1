@@ -16,3 +16,13 @@ ORDER BY yalgaa DESC;
 --task 4
 select * from staff
 where branchNo IN (select branchNo from branch where city = 'London');
+
+--task 5
+---oilgomjgui
+
+--task 6
+SELECT * FROM staff
+WHERE branchNo IN (
+    SELECT branchNo FROM branch
+    WHERE street = '22 Deer Rd'
+    );
