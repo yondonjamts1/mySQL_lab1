@@ -75,5 +75,14 @@ WHERE staff.branchNo = 'B003';
 --task 14
 
 --task 15
+--aldaatai
+SELECT * FROM propertyforrent
+WHERE propertyforrent.rent > (
+    SELECT propertyforrent.rent FROM propertyforrent
+    WHERE propertyforrent.ownerNo IN(
+        SELECT privateowner.ownerNo FROM privateowner
+        WHERE privateowner.fName = 'Carol'
+    )
+);
 
 --task 16
