@@ -45,6 +45,10 @@ WHERE propertyforrent.rent < (
     FROM client1
     WHERE client1.fName = 'Mary'
     );
+    
+--task 9
+
+--task 10
 
 --task 11
 SELECT * FROM client1
@@ -57,3 +61,11 @@ WHERE client1.clientNo IN(
 UPDATE staff
 SET staff.salary=(staff.salary+0.1*staff.salary)
 WHERE staff.branchNo = 'B003';
+
+--task 13
+
+--task 14
+
+--task 15
+
+--task 16
