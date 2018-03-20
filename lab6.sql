@@ -18,7 +18,15 @@ select * from staff
 where branchNo IN (select branchNo from branch where city = 'London');
 
 --task 5
----oilgomjgui
+--oilgosoon
+select * from propertyforrent
+where rent < (
+	select min(rent) from propertyforrent
+	where ownerNo IN (
+		select ownerNo from privateowner
+		where fname = 'Tony'
+		)
+	);
 
 --task 6
 SELECT * FROM staff
