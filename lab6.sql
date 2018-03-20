@@ -53,3 +53,7 @@ WHERE client1.clientNo IN(
     WHERE viewing.comment1 = ' '
     );
     
+--task 12
+UPDATE staff
+SET staff.salary=(staff.salary+0.1*staff.salary)
+WHERE staff.branchNo = 'B003';
