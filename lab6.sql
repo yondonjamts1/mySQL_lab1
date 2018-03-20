@@ -12,3 +12,7 @@ ORDER BY ASC;
 select * , abs(min(staff.salary) - staff.salary) as yalgaa
 from staff
 ORDER BY yalgaa DESC;
+
+--task 4
+select * from staff
+where branchNo IN (select branchNo from branch where city = 'London');
