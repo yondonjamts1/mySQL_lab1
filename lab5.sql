@@ -127,6 +127,14 @@ FROM
 GROUP BY
     city;
     
+--task 19 v2
+--daalgavar 8 v2
+
+SELECT *, 
+COUNT(type1) as 'typecount'
+FROM propertyforrent
+GROUP BY propertyforrent.city,propertyforrent.type1;
+    
 --task 20
 --daalgavar 9
 SELECT client1.prefType, AVG(client1.maxRent) as max FROM client1
