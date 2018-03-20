@@ -71,6 +71,12 @@ SET staff.salary=(staff.salary+0.1*staff.salary)
 WHERE staff.branchNo = 'B003';
 
 --task 13
+SELECT * FROM privateowner
+WHERE privateowner.ownerNo IN(
+    SELECT propertyforrent.ownerNo FROM propertyforrent
+    GROUP BY propertyforrent.ownerNo
+    HAVING COUNT(propertyforrent.ownerNo) > 1
+    );	
 
 --task 14
 
