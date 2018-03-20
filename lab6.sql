@@ -86,3 +86,8 @@ WHERE min(propertyforrent.rent) > (
 );
 
 --task 16
+SELECT * FROM propertyforrent
+WHERE propertyforrent.staffNo IN(
+    SELECT staff.staffNo FROM staff
+    WHERE staff.position1 = 'supervisor'
+    );
