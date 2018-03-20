@@ -79,6 +79,12 @@ WHERE privateowner.ownerNo IN(
     );	
 
 --task 14
+SELECT COUNT(staff.staffNo) as 'staffcount', SUM(staff.salary) as 'sumsal' FROM staff
+WHERE staff.branchNo IN(
+    SELECT branchNo FROM branch
+    GROUP BY staff.staffNo
+    HAVING COUNT(staff.staffNo) > 1
+    );
 
 --task 15
 ----aldaagui bolson
