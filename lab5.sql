@@ -88,7 +88,12 @@ WHERE
 
 --task 16
 --daalgavar 5
-
+SELECT fName,lName,position1 FROM staff
+WHERE staffNo IN (
+    SELECT staffNo FROM propertyforrent
+    WHERE rooms = 3
+    )
+ORDER BY branchNo, position1;
 
 --task 17
 --daalgavar 6
@@ -124,6 +129,8 @@ GROUP BY
     
 --task 20
 --daalgavar 9
+SELECT client1.prefType, AVG(client1.maxRent) as max FROM client1
+ORDER BY COUNT(prefType);
 
 --task 21
 --daalgavar 10
