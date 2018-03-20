@@ -26,3 +26,14 @@ WHERE branchNo IN (
     SELECT branchNo FROM branch
     WHERE street = '22 Deer Rd'
     );
+
+--task 7
+--xiinee
+
+--task 8
+SELECT * FROM propertyforrent
+WHERE propertyforrent.rent < (
+    SELECT client1.maxRent
+    FROM client1
+    WHERE client1.fName = 'Mary'
+    );
