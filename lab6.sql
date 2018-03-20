@@ -37,6 +37,14 @@ WHERE branchNo IN (
 
 --task 7
 --xiinee
+SELECT * FROM propertyforrent
+WHERE propertyforrent.staffNo IN(
+    SELECT staffNo FROM staff
+    WHERE branchNo IN(
+        SELECT branchNo FROM branch
+        WHERE branch.street = '163 Main St'
+        )
+    );
 
 --task 8
 SELECT * FROM propertyforrent
