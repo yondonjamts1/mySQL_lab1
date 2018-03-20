@@ -45,3 +45,11 @@ WHERE propertyforrent.rent < (
     FROM client1
     WHERE client1.fName = 'Mary'
     );
+
+--task 11
+SELECT * FROM client1
+WHERE client1.clientNo IN(
+    SELECT viewing.clientNo FROM viewing
+    WHERE viewing.comment1 = ' '
+    );
+    
