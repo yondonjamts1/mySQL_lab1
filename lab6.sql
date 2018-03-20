@@ -77,7 +77,7 @@ WHERE staff.branchNo = 'B003';
 --task 15
 --aldaatai
 SELECT * FROM propertyforrent
-WHERE propertyforrent.rent > (
+WHERE min(propertyforrent.rent) > (
     SELECT propertyforrent.rent FROM propertyforrent
     WHERE propertyforrent.ownerNo IN(
         SELECT privateowner.ownerNo FROM privateowner
