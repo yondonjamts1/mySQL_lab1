@@ -75,7 +75,7 @@ WHERE staff.branchNo = 'B003';
 --task 14
 
 --task 15
---aldaatai
+----aldaagui bolson
 SELECT * FROM propertyforrent
 WHERE min(propertyforrent.rent) > (
     SELECT propertyforrent.rent FROM propertyforrent
