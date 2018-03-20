@@ -6,3 +6,9 @@ WHERE staff.position1 = "Manager" AND staff.branchNo = 'B005';
 SELECT * FROM staff
 WHERE staff.staffNo LIKE "SL%" AND staff.sex = "M"
 ORDER BY ASC;
+
+--task 3
+----logic.oor bol ingeed xiichixmeer l bgan
+select * , abs(min(staff.salary) - staff.salary) as yalgaa
+from staff
+ORDER BY yalgaa DESC;
