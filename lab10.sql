@@ -55,7 +55,7 @@ CREATE TABLE lessRel(
     
 INSERT INTO lessRel(majorNo,lessonNo)
 VALUES ("EC001","ECEN201"),
-	   ("EC001","ECEN403"),
+       ("EC001","ECEN403"),
        ("EC002","ECEN202"),
        ("EC002","ECEN303"),
        ("EC002","ECEN404"),
