@@ -76,11 +76,11 @@ CREATE TABLE chLesson(
     o3 INT);
     
 INSERT INTO chLesson(studNo,lessonNo,chYear,chSeason,o1,o2,o3)
-VALUES ("14B1SEAS01","ECEN202",2,2,30,30,40),
-       ("14B1SEAS02","ECEN201",2,1,25,30,35),
-       ("14B1SEAS03","ECEN201",2,1,15,19,30),
-       ("14B1SEAS04","ECEN201",2,1,25,25,28),
-       ("14B1SEAS05","ECEN404",3,2,20,25,37),
+VALUES ("14B1SEAS01","ECEN202",2015,2,30,30,40),
+       ("14B1SEAS02","ECEN201",2015,1,25,30,35),
+       ("14B1SEAS03","ECEN201",2015,1,15,19,30),
+       ("14B1SEAS04","ECEN201",2015,1,25,25,28),
+       ("14B1SEAS05","ECEN404",2016,2,20,25,37),
        ("14B1SEAS06","ECEN",,,,,),
        ("14B1SEAS","ECEN",,,,,),
        ("14B1SEAS","ECEN",,,,,),
