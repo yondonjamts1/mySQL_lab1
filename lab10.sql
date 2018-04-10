@@ -65,3 +65,33 @@ VALUES ("EC001","ECEN201"),
        ("EC004","ECEN303"),
        ("EC005","ECEN201"),
        ("EC005","ECEN403");
+
+CREATE TABLE chLesson(
+    studNo VARCHAR(10),
+    lessonNo VARCHAR(7),
+    chYear INT,
+    chSeason INT,
+    o1 INT,
+    o2 INT,
+    o3 INT);
+    
+INSERT INTO chLesson(studNo,lessonNo,chYear,chSeason,o1,o2,o3)
+VALUES ("14B1SEAS01","ECEN202",2,2,30,30,40),
+       ("14B1SEAS02","ECEN201",2,1,25,30,35),
+       ("14B1SEAS03","ECEN201",2,1,15,19,30),
+       ("14B1SEAS04","ECEN201",2,1,25,25,28),
+       ("14B1SEAS05","ECEN404",3,2,20,25,37),
+       ("14B1SEAS06","ECEN",,,,,),
+       ("14B1SEAS","ECEN",,,,,),
+       ("14B1SEAS","ECEN",,,,,),
+       ("14B1SEAS","ECEN",,,,,),
+       ("14B1SEAS","ECEN",,,,,),
+       ("14B1SEAS","ECEN",,,,,),
+       ("14B1SEAS","ECEN",,,,,),
+       ("14B1SEAS","ECEN",,,,,),
+       ("14B1SEAS","ECEN",,,,,),
+       ("14B1SEAS","ECEN",,,,,),
+       ("14B1SEAS","ECEN",,,,,),
+       ("14B1SEAS","ECEN",,,,,),
+       ("14B1SEAS","ECEN",,,,,),
+       ("14B1SEAS","ECEN",,,,,);
