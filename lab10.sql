@@ -35,3 +35,16 @@ VALUES ("14B1SEAS01","EC002","Amraa","Ankhaa","M","1997-01-01","2014-09-01"),
        ("14B1SEAS13","EC003","Orkhon","Onon","F","1997-06-08","2014-09-01"),
        ("14B1SEAS14","EC001","Purev","Peljee","M","1998-02-15","2014-09-01"),
        ("14B1SEAS15","EC005","Ravdan","Rentsenkhand","F","1999-11-14","2014-09-01");
+
+    
+CREATE TABLE lesson(
+    lessonNo VARCHAR(7),
+    lessonName CHAR(25),
+    lessonDesc CHAR(250));
+    
+INSERT INTO lesson (lessonNo,lessonName,lessonDesc)
+VALUES ("ECEN201","Principles of Electronics","This course introduces students to the basic components of electronics"),
+	   ("ECEN202","Signals and Systems","The course presents and integrates the basic concepts for both continuous-time and discrete-time signals and systems. Signal and system representations are developed for both time and frequency domains."),
+       ("ECEN303","Digital Communications","This course is a graduate level introduction to the basic principles of digital communication systems"),
+       ("ECEN403","Power Electronics","An introduction to switched-mode dc-dc converters"),
+       ("ECEN404","Digital Signal Processing","Signal processing is one of the fundamental theories and techniques to construct modern information systems");
