@@ -44,7 +44,7 @@ CREATE TABLE lesson(
     
 INSERT INTO lesson (lessonNo,lessonName,lessonDesc)
 VALUES ("ECEN201","Principles of Electronics","This course introduces students to the basic components of electronics"),
-	   ("ECEN202","Signals and Systems","The course presents and integrates the basic concepts for both continuous-time and discrete-time signals and systems. Signal and system representations are developed for both time and frequency domains."),
+       ("ECEN202","Signals and Systems","The course presents and integrates the basic concepts for both continuous-time and discrete-time signals and systems. Signal and system representations are developed for both time and frequency domains."),
        ("ECEN303","Digital Communications","This course is a graduate level introduction to the basic principles of digital communication systems"),
        ("ECEN403","Power Electronics","An introduction to switched-mode dc-dc converters"),
        ("ECEN404","Digital Signal Processing","Signal processing is one of the fundamental theories and techniques to construct modern information systems");
