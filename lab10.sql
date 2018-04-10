@@ -48,3 +48,20 @@ VALUES ("ECEN201","Principles of Electronics","This course introduces students t
        ("ECEN303","Digital Communications","This course is a graduate level introduction to the basic principles of digital communication systems"),
        ("ECEN403","Power Electronics","An introduction to switched-mode dc-dc converters"),
        ("ECEN404","Digital Signal Processing","Signal processing is one of the fundamental theories and techniques to construct modern information systems");
+
+CREATE TABLE lessRel(
+    majorNo VARCHAR(5),
+    lessonNo VARCHAR(7));
+    
+INSERT INTO lessRel(majorNo,lessonNo)
+VALUES ("EC001","ECEN201"),
+	   ("EC001","ECEN403"),
+       ("EC002","ECEN202"),
+       ("EC002","ECEN303"),
+       ("EC002","ECEN404"),
+       ("EC003","ECEN201"),
+       ("EC003","ECEN404"),
+       ("EC004","ECEN201"),
+       ("EC004","ECEN303"),
+       ("EC005","ECEN201"),
+       ("EC005","ECEN403");
