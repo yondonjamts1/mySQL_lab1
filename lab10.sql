@@ -5,7 +5,7 @@ CREATE TABLE prof (
     
 INSERT INTO prof(majorNo,majorName)
 VALUES ("EC001","Electronics Technology"),
-	   ("EC002","Communication Technology"),
+       ("EC002","Communication Technology"),
        ("EC003","Computer engineering"),
        ("EC004","Computer networking"),
        ("EC005","Renewable electronics");
@@ -21,7 +21,7 @@ CREATE TABLE stud (
     
 INSERT INTO stud (studNo, studMaj, lName, fName, sex, dob, doe)
 VALUES ("14B1SEAS01","EC002","Amraa","Ankhaa","M","1997-01-01","2014-09-01"),
-	   ("14B1SEAS02","EC001","Bataa","Boldoo","M","1996-02-02","2014-09-01"),
+       ("14B1SEAS02","EC001","Bataa","Boldoo","M","1996-02-02","2014-09-01"),
        ("14B1SEAS03","EC005","Chimed","Chimgee","F","1995-03-03","2014-09-01"),
        ("14B1SEAS04","EC003","Dondog","Dorj","M","1996-12-12","2014-09-01"),
        ("14B1SEAS05","EC003","Enkh","Erdene","M","1997-11-11","2014-09-01"),
