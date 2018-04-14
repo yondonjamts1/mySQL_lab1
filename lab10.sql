@@ -1,6 +1,7 @@
 CREATE TABLE prof (
     majorNo VARCHAR(5),
-    majorName CHAR(25)
+    majorName CHAR(25),
+    PRIMARY KEY(majorNo)
     );
     
 INSERT INTO prof(majorNo,majorName)
@@ -17,7 +18,8 @@ CREATE TABLE stud (
     fName CHAR(20),
     sex CHAR(1),
     dob DATE,
-    doe DATE);
+    doe DATE,
+	PRIMARY KEY(studNo));
     
 INSERT INTO stud (studNo, studMaj, lName, fName, sex, dob, doe)
 VALUES ("14B1SEAS01","EC002","Amraa","Ankhaa","M","1997-01-01","2014-09-01"),
@@ -40,7 +42,8 @@ VALUES ("14B1SEAS01","EC002","Amraa","Ankhaa","M","1997-01-01","2014-09-01"),
 CREATE TABLE lesson(
     lessonNo VARCHAR(7),
     lessonName CHAR(25),
-    lessonDesc CHAR(250));
+    lessonDesc CHAR(250),
+	PRIMARY KEY(lessonNo));
     
 INSERT INTO lesson (lessonNo,lessonName,lessonDesc)
 VALUES ("ECEN201","Principles of Electronics","This course introduces students to the basic components of electronics"),
@@ -73,7 +76,8 @@ CREATE TABLE chLesson(
     chSeason INT,
     o1 INT,
     o2 INT,
-    o3 INT);
+    o3 INT,
+	PRIMARY KEY(studNo));
     
 INSERT INTO chLesson(studNo,lessonNo,chYear,chSeason,o1,o2,o3)
 VALUES ("14B1SEAS01","ECEN202",2015,2,30,30,40),
