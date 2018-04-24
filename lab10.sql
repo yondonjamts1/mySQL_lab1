@@ -95,3 +95,74 @@ VALUES ("14B1SEAS01","ECEN202",2015,2,30,30,40),
        ("14B1SEAS13","ECEN404",2017,1,30,21,37),
        ("14B1SEAS14","ECEN403",2017,1,26,15,36),
        ("14B1SEAS15","ECEN201",2015,2,28,19,40);
+
+//Bodlogo//
+/2/
+SELECT p.professionalName, COUNT(*)
+FROM lesson l LEFT JOIN lessonrelation r ON l.lessonNo = r.lessonNo
+LEFT JOIN professional p ON p.professionalNo = r.professionalNo
+GROUP BY r.professionalNo
+
+/3/ 
+SELECT professionalName,yearEntry, COUNT(*)
+FROM student
+GROUP BY professionalName, yearEntry
+
+/4/
+SELECT l.lessonName
+FROM lesson l LEFT JOIN lessonrelation r ON l.lessonNo = r.lessonNo
+WHERE r.professionalNo = (SELECT p.professionalNo
+FROM student s LEFT JOIN professional p ON s.professionalName = p.professionalName 
+WHERE s.lName = 'Bat')
+
+/5/
+SELECT c.*, s.lName, l.lessonName
+FROM chosenlesson c LEFT JOIN student s ON c.studentNo = s.StudentNo
+	LEFT JOIN lesson l ON l.lessonNo = c.lessonNo
+WHERE s.lName = 'Bat'
+
+/6/
+SELECT s.lName , AVG(O1+O2+O3)
+FROM chosenlesson c LEFT JOIN student s ON s.StudentNo = c.studentNo
+WHERE s.lName = 'Bat' AND lYear = '2016' AND season = '1'
+
+
+//Daalgavar//
+
+/1/
+SELECT studentNo, COUNT(*)
+FROM chosenlesson 
+GROUP BY studentNo
+
+/2/
+SELECT s.professionalName,MAX(c.O1+c.O2+c.O3) AS MAX, MIN(c.O1+c.O2+c.O3) AS MIN, AVG(c.O1+c.O2+c.O3) AS AVG
+FROM chosenlesson c LEFT JOIN student s ON s.StudentNo = c.studentNo
+GROUP BY s.professionalName  
+
+/3/
+SELECT s.*
+FROM chosenlesson c LEFT JOIN student s ON s.StudentNo = c.studentNo
+WHERE lYear = '2016' AND season = '?????'
+GROUP BY s.professionalName 
+HAVING SUM(O1+O2+O3)<60
+
+/4/
+SELECT *
+FROM chosenlesson
+WHERE lYear = '2016' AND season = '?????' AND studentNo = 
+(SELECT s.studentNo
+FROM chosenlesson c LEFT JOIN student s ON s.StudentNo = c.studentNo
+WHERE lYear = '2016' AND season = '?????'
+ORDER BY  SUM(O1+O2+O3) DESC
+LIMIT 1)
+
+/5/
+DELETE FROM chosenlesson
+WHERE lYear<2016 AND O1 IS NULL AND O2 IS NULL
+
+/6/
+SELECT lessonNo, COUNT(*)  AS COUNT
+FROM chosenlesson
+GROUP BY lessonNo
+ORDER BY COUNT DESC
+LIMIT 1
