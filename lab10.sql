@@ -98,10 +98,8 @@ VALUES ("14B1SEAS01","ECEN202",2015,2,30,30,40),
 
 //Bodlogo//
 /2/
-SELECT p.professionalName, COUNT(*)
-FROM lesson l LEFT JOIN lessonrelation r ON l.lessonNo = r.lessonNo
-LEFT JOIN professional p ON p.professionalNo = r.professionalNo
-GROUP BY r.professionalNo
+SELECT majorNo,COUNT(majorNo) FROM lessrel
+GROUP BY majorNo;
 
 /3/ 
 SELECT professionalName,yearEntry, COUNT(*)
