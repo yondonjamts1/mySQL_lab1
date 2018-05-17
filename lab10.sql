@@ -97,32 +97,33 @@ VALUES ("14B1SEAS01","ECEN202",2015,2,30,30,40),
        ("14B1SEAS15","ECEN201",2015,2,28,19,40);
 
 //TASK
-/2/
+
+//2
 SELECT majorNo,COUNT(majorNo) FROM lessrel
 GROUP BY majorNo;
 
-/3/ 
-SELECT professionalName,yearEntry, COUNT(*)
-FROM student
-GROUP BY professionalName, yearEntry
+//3
+SELECT studMaj,doe, COUNT(*)
+FROM stud
+GROUP BY studMaj, doe
 
-/4/
+//4
 SELECT l.lessonName
-FROM lesson l LEFT JOIN lessonrelation r ON l.lessonNo = r.lessonNo
-WHERE r.professionalNo = (SELECT p.professionalNo
-FROM student s LEFT JOIN professional p ON s.professionalName = p.professionalName 
-WHERE s.lName = 'Bat')
+FROM lesson l LEFT JOIN lessrel r ON l.lessonNo = r.lessonNo
+WHERE r.lessonNo = (SELECT p.majorNo
+FROM stud s LEFT JOIN prof p ON s.studMaj = p.majorName 
+WHERE s.lName = 'Bataa')
 
-/5/
+//5
 SELECT c.*, s.lName, l.lessonName
-FROM chosenlesson c LEFT JOIN student s ON c.studentNo = s.StudentNo
+FROM chlesson c LEFT JOIN stud s ON c.studNo = s.StudNo
 	LEFT JOIN lesson l ON l.lessonNo = c.lessonNo
-WHERE s.lName = 'Bat'
+WHERE s.lName = 'Bataa'
 
-/6/
+//6
 SELECT s.lName , AVG(O1+O2+O3)
-FROM chosenlesson c LEFT JOIN student s ON s.StudentNo = c.studentNo
-WHERE s.lName = 'Bat' AND lYear = '2016' AND season = '1'
+FROM chlesson c LEFT JOIN stud s ON s.StudNo = c.studNo
+WHERE s.lName = 'Bataa' AND chYear = '2015' AND chSeason = '1'
 
 
 //HW
