@@ -96,7 +96,7 @@ VALUES ("14B1SEAS01","ECEN202",2015,2,30,30,40),
        ("14B1SEAS14","ECEN403",2017,1,26,15,36),
        ("14B1SEAS15","ECEN201",2015,2,28,19,40);
 
-//Bodlogo//
+//TASK
 /2/
 SELECT majorNo,COUNT(majorNo) FROM lessrel
 GROUP BY majorNo;
@@ -125,7 +125,7 @@ FROM chosenlesson c LEFT JOIN student s ON s.StudentNo = c.studentNo
 WHERE s.lName = 'Bat' AND lYear = '2016' AND season = '1'
 
 
-//Daalgavar//
+//HW
 
 /1/
 SELECT studentNo, COUNT(*)
