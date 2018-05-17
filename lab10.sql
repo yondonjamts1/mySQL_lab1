@@ -128,24 +128,23 @@ WHERE s.lName = 'Bataa' AND chYear = '2015' AND chSeason = '1'
 
 //HW
 
-/1/
-SELECT studentNo, COUNT(*)
-FROM chosenlesson 
-GROUP BY studentNo
+//1
+SELECT studNo, COUNT(*)
+FROM chlesson 
+GROUP BY studNo
 
-/2/
-SELECT s.professionalName,MAX(c.O1+c.O2+c.O3) AS MAX, MIN(c.O1+c.O2+c.O3) AS MIN, AVG(c.O1+c.O2+c.O3) AS AVG
-FROM chosenlesson c LEFT JOIN student s ON s.StudentNo = c.studentNo
-GROUP BY s.professionalName  
+//2
+SELECT s.studMaj,MAX(c.O1+c.O2+c.O3) AS MAX, MIN(c.O1+c.O2+c.O3) AS MIN, AVG(c.O1+c.O2+c.O3) AS AVG
+FROM chlesson c LEFT JOIN stud s ON s.studNo = c.studNo
+GROUP BY s.studMaj  
 
-/3/
-SELECT s.*
-FROM chosenlesson c LEFT JOIN student s ON s.StudentNo = c.studentNo
-WHERE lYear = '2016' AND season = '?????'
-GROUP BY s.professionalName 
+//3
+SELECT * FROM chlesson LEFT JOIN stud ON chlesson.studNo = stud.studNo
+WHERE chYear = '2016' AND chSeason = '%'
+GROUP BY stud.studMaj
 HAVING SUM(O1+O2+O3)<60
 
-/4/
+/4/******/
 SELECT *
 FROM chosenlesson
 WHERE lYear = '2016' AND season = '?????' AND studentNo = 
